@@ -2,7 +2,7 @@ const game = document.getElementById("game");
 
 game.innerHTML = `
     <div id="logoScreen">
-        <img src="images/logo.png" alt="Game Logo">
+        <img src="images/logo/image.png" alt="Game Logo">
     </div>
 `;
 
