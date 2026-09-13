@@ -3,136 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>반짝이는 버튼</title>
-
+    <title>My Game</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
+        html, body {
             margin: 0;
-            width: 100vw;
-            height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            background: #101018;
-        }
-
-        /* 버튼 */
-        .shine-button {
-            position: relative;
-
-            width: 220px;
-            height: 70px;
-
-            border: none;
-            border-radius: 15px;
-
-            background: #292940;
-            color: white;
-
-            font-size: 22px;
-            font-weight: bold;
-
-            cursor: pointer;
-
-            overflow: hidden;
-
-            box-shadow:
-                0 0 10px rgba(255,255,255,0.1);
-
-            transition:
-                transform 0.2s,
-                box-shadow 0.2s;
-        }
-
-        /* 마우스를 올렸을 때 */
-        .shine-button:hover {
-            transform: scale(1.05);
-
-            box-shadow:
-                0 0 15px rgba(255,255,255,0.4),
-                0 0 40px rgba(120,180,255,0.3);
-        }
-
-        /* 버튼 위를 지나가는 빛 */
-        .shine-button::before {
-            content: "";
-
-            position: absolute;
-
-            top: 0;
-            left: -100%;
-
-            width: 50%;
+            width: 100%;
             height: 100%;
-
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255,255,255,0.8),
-                transparent
-            );
-
-            transform: skewX(-20deg);
+            overflow: hidden;
         }
-
-        .shine-button:hover::before {
-            animation: shine 0.8s;
+        body {
+            background: black;
         }
-
-        @keyframes shine {
-            from {
-                left: -100%;
-            }
-
-            to {
-                left: 150%;
-            }
-        }
-
-        /* 클릭했을 때 */
-        .shine-button:active {
-            transform: scale(0.95);
-        }
-
-        .button-text {
-            position: relative;
-            z-index: 2;
-        }
-        .neon-text {
-            color: white;
-            font-size: 60px;
-            font-weight: bold;
-
-            text-shadow:
-                0 0 5px #fff,
-                0 0 10px #00ffff,
-                0 0 20px #00ffff,
-                0 0 40px #00ffff,
-                0 0 80px #00ffff;
+        #game {
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
-
 <body>
 
-    <button class="shine-button" onclick="buttonClick()">
-        <span class="button-text">CLICK</span>
-    </button>
+    <div id="game"></div>
 
-    <script>
-        function buttonClick() {
-            alert("버튼을 눌렀습니다!");
-        }
-    </script>
-    <div class="neon-text">
-        NEON TEXT
-    </div>
+    <script src="script/logo.js"></script>
+
 </body>
 </html>
