@@ -1,12 +1,18 @@
+```javascript
+import { startLobby } from "./lobby.js";
+
+
+// 로고 화면 생성
 const game = document.getElementById("game");
 
 game.innerHTML = `
     <div id="logoScreen">
-        <img src="images/logo/image.png" alt="Game Logo">
+        <img src="images/logo.png" alt="Game Logo">
     </div>
 `;
 
 const logoScreen = document.getElementById("logoScreen");
+
 
 // 로고 화면 디자인
 logoScreen.style.width = "100%";
@@ -28,9 +34,7 @@ logoScreen.addEventListener("click", function () {
     // 로고 화면 제거
     game.innerHTML = "";
 
-    // lobby.js 실행
-    const script = document.createElement("script");
-    script.src = "script/lobby.js";
-
-    document.body.appendChild(script);
+    // lobby.js의 startLobby 함수 실행
+    startLobby();
 });
+```
